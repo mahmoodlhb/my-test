@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-body">
+
+    </div>
+    <div class="d-flex">
+      <h1>{{productDetail.name}}</h1>
+      <h6 style="color: red">{{productDetail.count}}</h6>
+    </div>
+    <h3 style="color: green">{{productDetail.price|number:'.0'}}</h3>
+    <button (click)="edit(productDetail)">edit</button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class="product-form d-flex flex-column">
+    <input placeholder="name" [(ngModel)]="productItem.name!"/>
+    <input placeholder="count" [(ngModel)]="productItem.count"/>
+    <input placeholder="price" [(ngModel)]="productItem.price!"/>
+
+    <button class="btn btn-success" (click)="addProduct()">submit</button>
+
+    <div>
+      <app-product-item *ngFor="let item of productList" [productDetail]="item"
+                        (editEvent)="onEdit($event)"></app-product-item>
+    </div>
+  </div>
+</div>
+
